@@ -130,42 +130,75 @@
         };
     };
 
+#define DEFAULT 0
+#define DVRK    1
+#define NUM     2
+#define SYM     3
+#define MSE     4
+#define QWE     5
+
+
     keymap {
         compatible = "zmk,keymap";
 
-        default {
-            bindings = <
-&kp Q        &kp W           &kp E                &kp R        &kp T             &kp Y              &kp U            &kp I                &kp O        &kp P
-&mt LCTRL A  &mt LEFT_WIN S  &mt LEFT_ALT D       &lt 3 F      &mt LEFT_SHIFT G  &mt RIGHT_SHIFT H  &mt RIGHT_ALT J  &mt RIGHT_WIN K      &mt RCTRL L  &lt 1 ENTER
-&lt 6 Z      &kp X           &kp C                &kp V        &kp B             &kp N              &kp M            &kp COMMA            &kp PERIOD   &lt 6 SLASH
-                             &tap_hold_1 0 LC(D)  &lt 4 ENTER  &ltq 1 SPACE      &ltq 2 BACKSPACE   &lt 4 SPACE      &tap_hold_1 0 LC(D)
+default_layer {
+            label = "Marx";
+			bindings = <
+        &kp Q     &kp W      &kp E      &kp R      &kp T         &kp Y    &kp U      &kp I      &kp O      &kp P
+        &mt LWIN A &mt LALT B &mt LSFT V &mt LCTL F &kp G         &kp H    &mt RCTL N &mt RSFT M &mt RALT L &mt RWIN C 
+        &kp Z     &kp X      &kp K      &kp D  &kp S         &kp K    &kp J  &kp COMMA &kp DOT &kp S
+              &tog SYM  &lt SYM ESC  &lt NUM SPACE            &lt QWE BSPC  &lt MSE RET &tog DVRK
             >;
         };
 
-        num+fun {
-            bindings = <
-&kp N2    &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6   &kp N7        &kp N8        &kp N9        &kp N0            &kp MINUS
-&kp LEFT  &kp DOWN      &kp RIGHT     &kp UP_ARROW  &kp PG_UP      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp SEMICOLON     &kp SQT
-&kp HOME  &kp DEL       &kp END       &kp PG_DN     &kp GRAVE      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                        &none         &kp EQUAL     &kp BACKSLASH  &kp N0        &kp PERIOD    &none
+		    	dvorak_layer {
+            label = "DVRK";
+			bindings = <
+        &kp SINGLE_QUOTE     &kp COMMA   &kp DOT   &kp P   &kp Y         &kp F    &kp G     &kp C      &kp R      &kp L
+        &mt LWIN A &mt LALT O &mt LSFT E &mt LCTL U &kp I         &kp D    &mt RCTL H &mt RSFT T &mt RALT N &mt RWIN S 
+ 	&kp SEMI    &kp Q      &kp J      &kp K  &kp X         &kp B    &kp M  &kp W &kp V &kp Z
+            &trans   &lt SYM ESC  &lt NUM SPACE                 &lt QWE BSPC  &lt MSE RET &trans 
             >;
         };
 
-        shift {
+
+        number_layer {
+            label = "NUM";
             bindings = <
-&kp AT_SIGN   &kp HASH        &kp DOLLAR     &kp PERCENT       &kp CARET      &kp AMPERSAND          &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE
-&kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LS(UP_ARROW)  &kp LS(PG_UP)  &kp DOLLAR             &kp PERCENT       &kp CARET             &kp COLON              &kp DOUBLE_QUOTES
-&kp LS(HOME)  &kp RS(DELETE)  &kp LS(END)    &kp LS(PG_DN)     &kp TILDE      &kp EXCLAMATION        &kp AT_SIGN       &kp POUND             &kp LEFT_BRACE         &kp RIGHT_BRACE
-                              &none          &kp PLUS          &kp PIPE       &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &none
+                &kp UP  &kp LEFT  &kp DOWN   &kp RIGHT   &kp F4      &kp MINUS    &kp SEMI  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SLASH
+                &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                &kp N6   &mt RCTL N7  &mt RSFT N8  &mt RALT N9  &mt RWIN N0
+                &kp EXCLAMATION  &kp QUESTION  &kp LESS_THAN   &kp GREATER_THAN   &kp GRAVE     &kp UNDERSCORE   &kp COLON  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SINGLE_QUOTE
+        &trans          &trans          &trans       &kp BSPC   &kp K_MENU   &trans  
+            >;
+        };	
+
+        symbol_layer {
+            label = "SYM";
+            bindings = <
+                &kp C_VOL_UP    &kp LEFT       &kp C_PLAY_PAUSE         &kp RIGHT   &kp C_BRIGHTNESS_INC      &kp BACKSLASH  &kp EQUAL  &kp HOME  &kp PAGE_UP  &kp TILDE
+                &kp C_POWER   &kp C_PREVIOUS &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_MUTE                &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
+                &kp C_VOL_DN   &kp AT         &kp RET          &kp BSPC    &kp C_BRIGHTNESS_DEC       &kp PLUS  &kp MINUS   &kp END  &kp PAGE_DOWN  &kp TILDE2  
+         &trans   &lt MSE SPACE  &lt SYM ESC       &kp C_PLAY_PAUSE  &kp ESC   &trans 
             >;
         };
 
-        funtion {
+        mouse_layer {
+            label = "MSE";
             bindings = <
-&none      &kp LC(UP_ARROW)  &kp R  &kp F5         &none          &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&kp LC(A)  &kp LC(DOWN)      &none  &none          &none          &kp F4  &kp F5  &kp F6  &none    &kp F12
-&kp LC(Z)  &none             &none  &none          &none          &kp F1  &kp F2  &kp F3  &none    &none
-                             &none  &kp LS(LA(D))  &kp LS(LG(S))  &none   &none   &none
+                &mkp RCLK  &none   &mmv MOVE_UP   &none   &none          &kp C_BRIGHTNESS_INC  &kp PAGE_UP   &msc SCRL_UP  &kp PAGE_DOWN    &kp C_POWER
+                &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &bt BT_CLR                 &kp C_BRIGHTNESS_DEC  &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp K_POWER
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp C_BACKLIGHT_TOGGLE  &kp K_APP      &none       &kp K_LOCK       &kp C_SLEEP_MODE
+        &trans          &trans          &trans          &trans  &trans  &trans
+            >;
+        };
+
+	cangjie_layer {
+            label = "QWE";
+			bindings = <
+            		&kp A     &kp W      &kp E      &kp R      &kp T         &kp Y    &kp U      &kp I      &kp O      &kp A
+             		&mt LWIN Q &mt LALT S &mt LSFT D &mt LCTL F &kp G         &kp H    &mt RCTL J &mt RSFT K &mt RALT L &mt RWIN P 
+                &kp Z     &kp X      &kp C      &kp V  &kp B         &kp N    &kp M  &kp Y &kp N &kp B
+        &trans          &trans          &trans          &trans  &trans  &trans
             >;
         };
 
@@ -186,6 +219,8 @@
                             &none         &none         &none         &none     &none  &none
             >;
         };
+
+
 
         working-macro {
             bindings = <
