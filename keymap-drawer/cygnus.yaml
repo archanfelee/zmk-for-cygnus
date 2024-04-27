@@ -10,143 +10,217 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: S, h: LEFT WIN}
-  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F, h: funtion}
-  - {t: G, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: K, h: RIGHT WIN}
-  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:keyboard-return$$', h: num+fun}
-  - {t: Z, h: working-macro}
+  - {t: A, h: LWIN}
+  - {t: B, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: V, h: LSFT}
+  - {t: F, h: LCTL}
+  - G
+  - H
+  - {t: N, h: RCTL}
+  - {t: M, h: RSFT}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: C, h: RWIN}
+  - Z
+  - X
+  - K
+  - D
+  - S
+  - K
+  - J
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - S
+  - {t: symbol, h: toggle}
+  - {t: '$$mdi:keyboard-esc$$', h: symbol}
+  - {t: '$$mdi:keyboard-space$$', h: number}
+  - {t: '$$mdi:backspace$$', h: cangjie}
+  - {t: '$$mdi:keyboard-return$$', h: mouse}
+  - {t: dvorak, h: toggle}
+  dvorak:
+  - {t: '''', s: '"'}
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - P
+  - Y
+  - F
+  - G
+  - C
+  - R
+  - L
+  - {t: A, h: LWIN}
+  - {t: O, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: E, h: LSFT}
+  - {t: U, h: LCTL}
+  - I
+  - D
+  - {t: H, h: RCTL}
+  - {t: T, h: RSFT}
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: RWIN}
+  - {t: ;, s: ':'}
+  - Q
+  - J
+  - K
+  - X
+  - B
+  - M
+  - W
+  - V
+  - Z
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-esc$$', h: symbol}
+  - {t: '$$mdi:keyboard-space$$', h: number}
+  - {t: '$$mdi:backspace$$', h: cangjie}
+  - {t: '$$mdi:keyboard-return$$', h: mouse}
+  - {t: '$$mdi:transfer$$', type: trans}
+  number:
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - F4
+  - {t: '-', s: _}
+  - {t: ;, s: ':'}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - {t: /, s: '?'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - {t: '7', h: RCTL, s: '&'}
+  - {t: '8', h: RSFT, s: '*'}
+  - {t: '9', h: '$$mdi:apple-keyboard-option$$', s: (}
+  - {t: '0', h: RWIN, s: )}
+  - '!'
+  - '?'
+  - <
+  - '>'
+  - {t: '`', s: '~'}
+  - _
+  - ':'
+  - '{'
+  - '}'
+  - {t: '''', s: '"'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - MENU
+  - {t: '$$mdi:transfer$$', type: trans}
+  symbol:
+  - $$mdi:volume-high$$
+  - $$mdi:arrow-left-bold$$
+  - PLAY PAUSE
+  - $$mdi:arrow-right-bold$$
+  - $$mdi:brightness-5$$
+  - {t: \, s: '|'}
+  - {t: '=', s: +}
+  - HOME
+  - PgUp
+  - '~'
+  - $$mdi:power-standby$$
+  - PREVIOUS
+  - PLAY PAUSE
+  - $$mdi:skip-next$$
+  - $$mdi:volume-off$$
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - $$mdi:volume-low$$
+  - '@'
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - $$mdi:brightness-7$$
+  - +
+  - {t: '-', s: _}
+  - END
+  - PgDn
+  - '~'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-space$$', h: mouse, type: held}
+  - {t: '$$mdi:keyboard-esc$$', h: symbol}
+  - PLAY PAUSE
+  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  mouse:
+  - $$mdi:mouse-right-click-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:brightness-5$$
+  - PgUp
+  - $$mdi:pan-up$$
+  - PgDn
+  - $$mdi:power-standby$$
+  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - $$mdi:bluetooth-off$$
+  - $$mdi:brightness-7$$
+  - $$mdi:pan-left$$
+  - $$mdi:pan-down$$
+  - $$mdi:pan-right$$
+  - POWER
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  - BACKLIGHT TOGGLE
+  - APP
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - LOCK
+  - SLEEP MODE
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  cangjie:
+  - A
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - A
+  - {t: Q, h: LWIN}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: LSFT}
+  - {t: F, h: LCTL}
+  - G
+  - H
+  - {t: J, h: RCTL}
+  - {t: K, h: RSFT}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: P, h: RWIN}
+  - Z
   - X
   - C
   - V
   - B
   - N
   - M
-  - {t: ',', s: <}
-  - .
-  - {t: /, h: working-macro, s: '?'}
-  - {t: Ctl+ D, h: '&m1'}
-  - {t: '$$mdi:keyboard-return$$', h: mouse+media}
-  - {t: '$$mdi:keyboard-space$$', h: num+fun}
-  - {t: '$$mdi:backspace$$', h: shift}
-  - {t: '$$mdi:keyboard-space$$', h: mouse+media}
-  - {t: Ctl+ D, h: '&m1'}
-  num+fun:
-  - {t: '2', s: '@'}
-  - '3'
-  - '4'
-  - {t: '5', s: '%'}
-  - '6'
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
-  - {t: '0', s: )}
-  - {t: '-', s: _}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - $$mdi:arrow-up-bold$$
-  - PG UP
-  - '4'
-  - {t: '5', s: '%'}
-  - '6'
-  - {t: ;, s: ':'}
-  - {t: '''', s: '"', type: held}
-  - HOME
-  - $$mdi:backspace-reverse-outline$$
-  - END
-  - PG DN
-  - {t: '`', s: '~'}
-  - '1'
-  - '2'
-  - '3'
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '=', s: +}
-  - {t: \, s: '|', type: held}
-  - {t: '0', s: )}
-  - .
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  shift:
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - _
-  - Sft+ $$mdi:arrow-left-bold$$
-  - Sft+ $$mdi:arrow-down-bold$$
-  - Sft+ $$mdi:arrow-right-bold$$
-  - Sft+ $$mdi:arrow-up-bold$$
-  - Sft+ PG UP
-  - $
-  - '%'
-  - ^
-  - ':'
-  - '"'
-  - Sft+ HOME
-  - Sft+ $$mdi:backspace-reverse-outline$$
-  - Sft+ END
-  - Sft+ PG DN
-  - '~'
-  - '!'
-  - '@'
-  - '#'
-  - '{'
-  - '}'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - +
-  - '|'
-  - {t: ), type: held}
-  - '>'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  funtion:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Ctl+ $$mdi:arrow-up-bold$$
-  - R
-  - F5
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - Ctl+ A
-  - Ctl+ $$mdi:arrow-down-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F4
-  - F5
-  - F6
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F12
-  - Ctl+ Z
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F1
-  - F2
-  - F3
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Sft+Alt+ D
-  - Sft+Gui+ S
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Y
+  - N
+  - B
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   mouse+media:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
@@ -179,10 +253,10 @@ layers:
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - bluetooth
-  - bluetooth
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - cangjie
+  - cangjie
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   bluetooth:
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -216,10 +290,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   working-macro:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -242,16 +316,16 @@ layers:
   - '&m3'
   - '&m4'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - Ctl+ D
-  - '&m1'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+ D
   - '&m1'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Ctl+ D
+  - '&m1'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -259,7 +333,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
-- p: [0, 1]
+- p: [0, 19]
   k: $$mdi:keyboard-esc$$
-- p: [10, 11]
+- p: [10, 21]
   k: $$mdi:keyboard-tab$$
