@@ -1,4 +1,4 @@
-# zmk-config-cygnus from linyi
+# zmk-config-cygnus
 
 
 <img src="keymap-drawer/cygnus.svg" >
