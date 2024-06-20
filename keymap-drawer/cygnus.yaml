@@ -113,7 +113,7 @@ layers:
   symbol:
   - $$mdi:volume-high$$
   - $$mdi:arrow-left-bold$$
-  - PLAY PAUSE
+  - $$mdi:pan-up$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:brightness-5$$
   - +
@@ -132,8 +132,8 @@ layers:
   - (
   - )
   - $$mdi:volume-low$$
-  - '@'
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - REC
+  - $$mdi:pan-down$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:brightness-7$$
   - {t: \, s: '|'}
@@ -143,15 +143,15 @@ layers:
   - '~'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-space$$', h: mouse, type: held}
-  - {t: '$$mdi:keyboard-esc$$', h: symbol}
+  - $$mdi:keyboard-esc$$
   - PLAY PAUSE
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:transfer$$', type: trans}
   mouse:
   - $$mdi:mouse-right-click-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PgUp
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:brightness-5$$
   - PgUp
@@ -179,7 +179,7 @@ layers:
   - LOCK
   - SLEEP MODE
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
