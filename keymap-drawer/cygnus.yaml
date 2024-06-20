@@ -132,7 +132,7 @@ layers:
   - (
   - )
   - $$mdi:volume-low$$
-  - REC
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:pan-down$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:brightness-7$$
